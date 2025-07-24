@@ -107,10 +107,7 @@ jobs:
           TAURI_SIGNING_PRIVATE_KEY: ""
           TAURI_SIGNING_PRIVATE_KEY_PASSWORD: ""
           
-      # PASTE THE NEW DEBUGGING STEP HERE
-      - name: List build artifacts
-        run: dir /s src-tauri\target\release
-        shell: cmd    
+
         
       # Upload Windows Artifact on success
       - name: Upload Windows Artifact
@@ -118,7 +115,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: claudia-windows-build
-          path: src-tauri/target/release/bundle/msi/
+          path: src-tauri/target/release/claudia.exe
           retention-days: 5
           
       # Upload build artifacts for debugging (optional)
