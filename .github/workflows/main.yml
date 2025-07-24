@@ -102,7 +102,7 @@ jobs:
 
       # Build Tauri application
       - name: Build Tauri application
-        run: bun run tauri build --no-bundle -d
+        run: bun run tauri build 
         env:
           TAURI_SIGNING_PRIVATE_KEY: ""
           TAURI_SIGNING_PRIVATE_KEY_PASSWORD: ""
