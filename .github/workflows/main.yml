@@ -107,6 +107,11 @@ jobs:
           TAURI_SIGNING_PRIVATE_KEY: ""
           TAURI_SIGNING_PRIVATE_KEY_PASSWORD: ""
           
+      # PASTE THE NEW DEBUGGING STEP HERE
+      - name: List build artifacts
+        run: dir /s src-tauri\target\release
+        shell: cmd    
+        
       # Upload Windows Artifact on success
       - name: Upload Windows Artifact
         if: matrix.platform.os == 'windows-latest' && success()
